@@ -11,12 +11,8 @@
     body,
     #panorama {
       width: 100%;
-      height: 100%;
-      margin: 0;
-    }
-
-    #panorama {
       height: 100vh;
+      margin: 0;
     }
   </style>
 </head>
@@ -26,65 +22,67 @@
   <div id="panorama"></div>
 
   <script>
-    pannellum.viewer("panorama", {
+    pannellum.viewer('panorama', {
       default: {
-        firstScene: "scene1",
-        sceneFadeDuration: 1000,
-        autoLoad: true
+        firstScene: 'scene1',
+        sceneFadeDuration: 1000
       },
 
       scenes: {
         scene1: {
-          title: "Entrée",
-          panorama: "P01.jpg",
+          title: 'Entrée',
+          panorama: 'pano.jpg',
+          autoLoad: true,
           hotSpotDebug: true,
 
           hotSpots: [
             {
               pitch: -6,
               yaw: 28,
-              type: "scene",
-              sceneId: "scene2",
-              text: "Aller à la pièce 2"
+              type: 'scene',
+              sceneId: 'scene2',
+              text: 'Aller pièce 2'
             }
           ]
         },
 
         scene2: {
-          title: "Salle",
-          panorama: "P02.jpg",
+          title: 'Salle',
+          panorama: 'P02.jpg',
+          autoLoad: true,
           hotSpotDebug: true,
 
           hotSpots: [
             {
-              pitch: -5,
+              pitch: -6,
               yaw: -59,
-              type: "scene",
-              sceneId: "scene1",
-              text: "Retour à la pièce 1"
+              type: 'scene',
+              sceneId: 'scene1',
+              text: 'Retour pièce 1'
             },
             {
               pitch: -5,
               yaw: 59,
-              type: "scene",
-              sceneId: "scene3",
-              text: "Aller à la pièce 3"
+              type: 'scene',
+              sceneId: 'scene3',
+              text: 'Aller pièce 3'
             }
           ]
         },
 
         scene3: {
-          title: "Pièce 3",
-          panorama: "P03.jpg",
+          title: 'Pièce 3',
+          panorama: 'P03.jpg',
+          autoLoad: true,
           hotSpotDebug: true,
 
           hotSpots: [
             {
               pitch: -5,
               yaw: 180,
-              type: "scene",
-              sceneId: "scene2",
-              text: "Retour à la pièce 2"
+              type: 'scene',
+              sceneId: 'scene2',
+              text: 'Retour pièce 2'
             }
           ]
         }
