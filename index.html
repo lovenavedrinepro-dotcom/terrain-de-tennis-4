@@ -3,84 +3,88 @@
 <head>
   <link rel="stylesheet" href="pannellum.css"/>
   <script src="pannellum.js"></script>
+
   <style>
     html, body, #panorama {
-      width:100%;
-      height:100vh;
-      margin:0;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
     }
   </style>
 </head>
+
 <body>
 
 <div id="panorama"></div>
 
 <script>
-pannellum.viewer('panorama', {
-  default: {
-    firstScene: 'scene1',
-    sceneFadeDuration: 1000
-  },
-
-  scenes: {
-
-    scene1: {
-      title: 'Entrée',
-      panorama: 'P01.jpg',
-      autoLoad: true,
-      hotSpotDebug: true,
-      hotSpots: [
-        {
-          pitch: -80.84900087649838,
-          yaw: -80.86464044682158,
-          type: 'scene',
-          sceneId: 'scene2',
-          text: 'Aller pièce 2'
-        }
-      ]
+  pannellum.viewer('panorama', {
+    default: {
+      firstScene: 'scene1',
+      sceneFadeDuration: 1000
     },
 
-    scene2: {
-      title: 'Salle',
-      panorama: 'P02.jpg',
-      autoLoad: true,
-      hotSpotDebug: true,
-      hotSpots: [
-        {
-          pitch: -72.82477349618836,
-          yaw: -97.25942110150406,
-          type: 'scene',
-          sceneId: 'scene1',
-          text: 'Retour pièce 1'
-        },
-        {
-          pitch: -76.07958915947422,
-          yaw: -68.86215224497973,
-          type: 'scene',
-          sceneId: 'scene3',
-          text: 'Aller pièce 3'
-        }
-      ]
-    },
+    scenes: {
+      scene1: {
+        title: 'Entrée',
+        panorama: 'P01.jpg',
+        autoLoad: true,
+        hotSpotDebug: true,
 
-    scene3: {
-      title: 'Pièce 3',
-      panorama: 'P03.jpg',
-      autoLoad: true,
-      hotSpotDebug: true,
-      hotSpots: [
-        {
-          pitch: -76.07958915947422,
-          yaw: -68.86215224497973,
-          type: 'scene',
-          sceneId: 'scene2',
-          text: 'Retour pièce 2'
-        }
-      ]
+        hotSpots: [
+          {
+            pitch: 1.7994336867227798,
+            yaw: 110.0058892571435,
+            type: 'scene',
+            sceneId: 'scene2',
+            text: 'Aller pièce 2'
+          }
+        ]
+      },
+
+      scene2: {
+        title: 'Salle',
+        panorama: 'P02.jpg',
+        autoLoad: true,
+        hotSpotDebug: true,
+
+        hotSpots: [
+          {
+            pitch: -4.00391585533245,
+            yaw: -15.029691272460145,
+            type: 'scene',
+            sceneId: 'scene1',
+            text: 'Retour pièce 1'
+          },
+
+          {
+            pitch: -3.1598560196221883,
+            yaw: -22.253472902707546,
+            type: 'scene',
+            sceneId: 'scene3',
+            text: 'Aller pièce 3'
+          }
+        ]
+      },
+
+      scene3: {
+        title: 'Pièce 3',
+        panorama: 'P03.jpg',
+        autoLoad: true,
+        hotSpotDebug: true,
+
+        hotSpots: [
+          {
+            pitch: -3.1598560196221883,
+            yaw: -22.253472902707546,
+            type: 'scene',
+            sceneId: 'scene2',
+            text: 'Retour pièce 2'
+          }
+        ]
+      }
     }
-
-  }
-});
+  });
 </script>
 
 </body>
